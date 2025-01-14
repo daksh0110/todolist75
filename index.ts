@@ -3,10 +3,14 @@ import { initDB } from "./services/database.mongoose";
 import dotenv from "dotenv";
 import routes from "./routes";
 import messageRoutes from "./message.Routes";
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swagger-output.json");
+
 const app = express();
 const port = 5000;
 dotenv.config();
 initDB();
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

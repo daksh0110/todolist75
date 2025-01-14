@@ -10,7 +10,8 @@
   },
   "scripts": {
     "start": "ts-node index.ts",
-    "dev": "nodemon index.ts",
+    "dev": "node swagger.js && nodemon index.ts ",
+    "generateDoc": "node swagger.js",
     "build": "tsc",
     "serve": "node dist/index.js"
   },
