@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import { initDB } from "./services/database.mongoose";
 import dotenv from "dotenv";
-import routes from "./routes";
+import routes from "./userRoutes";
 import messageRoutes from "./messageRoutes";
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger-output.json");
