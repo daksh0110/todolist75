@@ -1,8 +1,8 @@
 import express, {Request,Response}from 'express';
 const routes = express.Router();
 
-import { userRegister } from './controllers/user.Register';
-import { userLogin } from './controllers/user.Login';
+import { userRegister } from './controllers/userRegister';
+import { userLogin } from './controllers/userLogin';
 
 
 routes
