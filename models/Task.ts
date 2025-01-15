@@ -17,6 +17,7 @@ const TaskSchema: Schema = new Schema(
       ref: "User",
       required: true,
     },
+    status: { type: String, default: "pending" },
   },
   { timestamps: true }
 );
